@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>Contactanos</title>
+
+	
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+	    	box-sizing: border-box;
+		}
+		body{
+			font-family: Arial, Helvatica, sans serif;
+	line-height: 1.5em;
+	background-color: #ffcde6;
+		}
+		
+		li a {
+			color: rgb(194, 91, 112);
+	        font-size: 25px;
+		    }
+
+		header{
+			width: 100%;
+			overflow: hidden;
+			background-color: black;
+		}
+
+        header  nav ul li{
+            list-style: none;
+            float: left;
+        }
+        header nav ul li a{
+            text-decoration: none;
+            padding: 15px 20px 15px 20px;
+            display: inline-block;
+            color: #ffcde6;
+        }
+        header nav ul li a:hover{
+            text-decoration: none;
+            padding: 15px 20px 15px 20px;
+            display: inline-block;
+            background-color: #e52f6e;
+            color: white;
+        } 
+        footer{
+        	background-color: rgb(194, 91, 112);
+        	text-decoration: none;
+            padding: 15px 20px 15px 20px;
+            display: inline-block
+            color: white;
+            color: white;
+        }
+		.form-register{
+			width: 400px;
+			background: #24303c;
+			padding: 30px;
+			margin: auto;
+			margin-top: 100px;
+			border-radius: 4px;
+			font-family: 'calibri';
+			color: white;
+			box-shadow: 7px 13px 37px #000;
+		}
+		.form-register h4{
+			font-size: 22px;
+			margin-bottom: 20px;
+		}
+		#inputNombre{
+			width: 100%;
+			background: #24303c; 
+			padding: 10px; 
+			border-radius: 4px; 
+			margin-bottom: 16px; 
+			border: 1px solid Gray; 
+			font-family: 'calibri'; 
+			font-size: 18px;
+		}
+		#inputMaterno{
+			width: 100%;
+			background: #24303c; 
+			padding: 10px; 
+			border-radius: 4px; 
+			margin-bottom: 16px; 
+			border: 1px solid Gray; 
+			font-family: 'calibri'; 
+			font-size: 18px;
+		}
+		#inputPaterno{
+			width: 100%;
+			background: #24303c; 
+			padding: 10px; 
+			border-radius: 4px; 
+			margin-bottom: 16px; 
+			border: 1px solid Gray; 
+			font-family: 'calibri'; 
+			font-size: 18px;
+		}
+		#inputMail{
+			width: 100%;
+			background: #24303c; 
+			padding: 10px; 
+			border-radius: 4px; 
+			margin-bottom: 16px; 
+			border: 1px solid Gray; 
+			font-family: 'calibri'; 
+			font-size: 18px;
+		}
+		#inputTelefono{
+			width: 100%;
+			background: #24303c; 
+			padding: 10px; 
+			border-radius: 4px; 
+			margin-bottom: 16px; 
+			border: 1px solid Gray; 
+			font-family: 'calibri'; 
+			font-size: 18px;
+		}
+		.form-register p{
+			height: 40px;
+			text-align: center;
+			font-size: 18px;
+			line-height: 22px;
+		}
+		.form-register a{
+			color: white;
+			text-decoration: none;
+		}
+		.form-register .botons{
+			width: 100%;
+			background: #fcb7af;
+			border: none;
+			padding: 12px;
+			color: #b0f2c2;
+			margin: 16px 0;
+			font-size: 16px;
+		}
+			nav{
+			padding: 10px;
+			float: right;
+			font-size: 25px;
+			color: green;
+		}
+        
+	</style>
+</head>
+
+
+<body>
+
+    <header id="divIcons">
+
+    	<center><img src="imagen/canela.png" alt="imagen" width="200" height="200"><img src="imagen/logo_rgb.png" alt="imagen" width="200" height="200"></center>
+
+    	<nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="Nosotros.html">¿Quienes Somos?</a></li>
+				<li><a href="MisionyVision.html">Misión y Visión</a></li>
+				<li><a href="Productos.html">Productos</a></li>
+				<li><a href="#">Contactanos</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+
+	<section class="form-register">
+		<h4>Contactanos</h4>
+<form action="" method="get">
+		<div id="soydiv">
+	<input class ="claseInputs"type="text" id="inputNombre" placeholder="introduce nombre"/> <br> <br>
+
+	<input class ="claseInputs"type="mail" id="inputMail" placeholder="introduce tu mail"/> <br> <br>
+
+	<input class ="claseInputs"type="text" id="inputTelefono" placeholder="introduce tu telefono"/> <br> <br>
+	</div>
+		<p> <input type="checkbox"> Estoy de acuerdo con <a href="#">terminos y condiciones</a></p> 
+		<button class="botons" onclick="enviarDatos()">Enviar Datos</button> <br>
+		<p><a href="#">¿ya tengo cuenta?</a></p>
+</form>
+	</section>
+	<script>	
+		function enviarDatos() {
+			var elementoNombre=document.getElementById("inputNombre")
+			var elementoTelefono=document.getElementById("inputTelefono")
+			var elementoMail=document.getElementById("inputMail")
+			var elementosClase=document.getElementsByClassName('claseInputs')
+
+			if (elementoNombre.value =="") {
+				alert("El campo nombre es obligatorio");
+				return false; //Para la ejecucion de la aplicación
+			}
+			if (elementoMail.value =="") {
+				alert("El campo mail es obligatorio")
+			}
+			if (elementoTelefono.value =="") {
+				alert("El campo telefono es obligatorio")
+			}
+		}
+	</script>
+
+    <br>
+    <br>
+
+	<center><div>
+                 <h4>Nuestras Redes Sociales</h4>
+                      <ul>
+                      	<li><a href="https://www.facebook.com/profile.php?id=100092425639242&mibextid=LQQJ4d/">Facebook</a></li>
+                        <li><a href="https://www.instagram.com/sweet_1985p/">Instagram</a></li>
+                        <li><a href="https://www.tiktok.com/@sweetrepostera/">Tik Tok</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <br>
+                      <h4>Contactos</h4>
+                      <div><a href="tel:#">311 265 7812</a></div>
+                      <div> <a href="mailto:#">Sweetreposteria1985@gmail.com</a></div>
+                    </div>
+                  </div>
+                  <div>
+                    <div >
+                    <br>
+
+                      <h4>Ubicación</h4>
+                      <div>
+                        <h4>
+                          Av. Del Valle 114, Cd del Valle , Tepic, Nayarit, Mexico
+                          <br>
+                          <h4>CP. 63157
+			</div> </center>
+
+			<br>
+			<br>
+			<br>
+
+			<center><footer> ©COPYRIGHT 2023 SWEET TODOS LOS DERECHOS RESERVADOS</footer><center>
+
+</html>
